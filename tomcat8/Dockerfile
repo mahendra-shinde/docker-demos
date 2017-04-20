@@ -18,6 +18,12 @@ ENV JAVA_HOME /jdk8
 # Expose port 8080 from container
 EXPOSE 8080
 
-COPY 
+# delete the existing ROOT application
+RUN rm -R /var/lib/tomcat8/webapps/ROOT
 
-ENRTRYPOINT ["/usr/share/tomcat8/bin/startup.sh"]
+# copy war file [Application package] to tomcat's deployment folder 
+# and rename to ROOT.war to make it ROOT application
+ADD data/*.war /var/lib/tomcat8/webapps/ROOT.war
+ 
+# start tomcat as soon as container is booted! 
+ENTRYPOINT ["/usr/share/tomcat8/bin/startup.sh"]
