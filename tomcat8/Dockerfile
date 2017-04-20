@@ -9,7 +9,7 @@ FROM mahendrshinde/jdk8
 MAINTAINER MahendraShinde@synergetics-india.com
 
 # Making sure to update repository cache before installing tomcat8 package
-RUN apt-get update && apt-get install tomcat8
+RUN apt-get update && apt-get install -y tomcat8
 
 # Set JAVA_HOME environment variable
 # Base image has Soft-Link created at '/jdk8'
@@ -26,4 +26,5 @@ RUN rm -R /var/lib/tomcat8/webapps/ROOT
 ADD data/*.war /var/lib/tomcat8/webapps/ROOT.war
  
 # start tomcat as soon as container is booted! 
-ENTRYPOINT ["/usr/share/tomcat8/bin/startup.sh"]
+CMD "/usr/share/tomcat8/bin/startup.sh"
+ENTRYPOINT "/bin/bash"
