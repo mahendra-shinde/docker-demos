@@ -5,5 +5,5 @@
  `docker run -d -p 3690:3690 -v /opt/svn:/opt/svn --name svnserver --hostname svnserver.mahendra.in mahendra/svnserver`	
 
 ### Command I have used to build this image
-  `docker build -t mahendra/svnserver . `
+  `docker build -t mahendrshinde/svnserver . `
 
