@@ -96,4 +96,4 @@ After container was destroyed and re-created, the volume preserved the mysql dat
     $ docker rm <container-id>
     ```
 
-> NOTE: Please replace every occurance of <container-id> with ID of your container
+> NOTE: Please replace every occurrence of <container-id> with ID of your container
