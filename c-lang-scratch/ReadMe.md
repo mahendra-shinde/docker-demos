@@ -9,3 +9,12 @@ After it's build a `binary`, i have copied the binary into my `scratch` image an
 Pre-Built Image is available at docker hub, try following command to pull it!
 `docker pull mahendrshinde/damn-small`
 
+## Steps to build and run container.
+
+```bash
+$ docker build -t c-app .
+$ docker run -t c-app
+....
+....
+
+```
