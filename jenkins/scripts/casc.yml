@@ -1,0 +1,39 @@
+jenkins:
+  authorizationStrategy:
+    loggedInUsersCanDoAnything
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+       - id: ${ADMIN_USER}
+         password: ${ADMIN_PASSWORD}
+unclassified:
+  sonarGlobalConfiguration:
+    buildWrapperEnabled: false
+    installations:
+    - name: "default"
+      serverUrl: "${SONARQUBE_URL}"
+      triggers:
+        skipScmCause: false
+        skipUpstreamCause: false
+
+  location:
+    adminAddress: "${ADMIN_EMAIL}"
+    url: http://${JENKINS_HOST}:8080/
+
+tool:
+  jdk:
+    installations:
+    - home: "/opt/java/openjdk/"
+      name: "JAVA8"
+
+  sonarRunnerInstallation:
+    installations:
+    - home: "/opt/sonar-scanner-4.5.0.2216-linux/"  
+      name: sonar
+      
+  maven:
+    installations:
+    - home: "/opt/apache-maven-3.6.3/"
+      name: "M3"
+  
