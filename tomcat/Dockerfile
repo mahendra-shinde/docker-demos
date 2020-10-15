@@ -12,7 +12,8 @@ MAINTAINER MahendraShinde@synergetics-india.com
 EXPOSE  8080
 WORKDIR "/usr/local/tomcat/"
 
-RUN ["rm","-R","webapps/ROOT"]
+## TOMCAT BASE IMAGE NOW CONTAINS NO ROOT APP
+#RUN ["rm","-R","webapps/ROOT"]
 
 ADD *.war /usr/local/tomcat/webapps/ROOT.war
 
