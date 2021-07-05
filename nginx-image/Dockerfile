@@ -1,5 +1,4 @@
-FROM my_nginx:latest
-MAINTAINER nginx Mahendra
+FROM nginx
 
-CMD service nginx start
+COPY index.html /usr/share/nginx/html
 
