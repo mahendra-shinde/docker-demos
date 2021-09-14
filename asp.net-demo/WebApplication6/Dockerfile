@@ -1,5 +1,5 @@
 ## Build Stage (user-defined name)
-FROM mahendrshinde/dotnetsdk:2.1  as build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.1 as build
 WORKDIR /app
 COPY  . .
 RUN ["dotnet","restore"]
