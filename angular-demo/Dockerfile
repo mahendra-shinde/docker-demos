@@ -2,7 +2,7 @@ FROM node as build
 WORKDIR /app
 COPY app1 .
 RUN ["npm","install"]
-RUN ["npm","build","--prod"]
+RUN ["npm","run","build","--prod"]
 
 FROM nginx
 # Copy all final build artifacts to nginx deployment directory!
