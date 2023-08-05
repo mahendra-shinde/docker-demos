@@ -1,2 +1,9 @@
 configuration-as-code:latest
 sonar:latest
+github:latest
+git:latest
+deploy:latest
+git-client:latest
+docker-plugin:1.4
+blueocean
+docker-workflow

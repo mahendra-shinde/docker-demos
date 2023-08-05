@@ -2,7 +2,7 @@
 
 The image built here would have following component pre-installed.
 
-1.  Jenkins with basic plugins like git. complete list of plugins is available [here](./plugins.txt)
+1.  Jenkins with plugins like git maven docker and blueocean. complete list of plugins is available [here](./plugins.txt)
 
 2.  The default username is `mahendra` and password is `password@1234`. you can specify your user credentials at `docker run` command.
 
@@ -12,7 +12,7 @@ The image built here would have following component pre-installed.
 1.  With all defaults
 
     ```
-    $ docker run -d -p 8080:8080 mahendrshinde/jenkins 
+    $ docker run -d -p 8080:8080 mahendrshinde/jenkins:blueocean 
     ```
 
 2.  With all options overridden
@@ -28,7 +28,7 @@ The image built here would have following component pre-installed.
     ADMIN_USER | Default Admin username | mahendra
     ADMIN_PASSWORD | Default User password | password@1234
     JENKINS_HOST | Hostname or DNS for container | localhost 
-    ADMIN_EMAIL | Email address for Jenkins Administrator | mahendraunlimited@gmail.com
+    ADMIN_EMAIL | Email address for Jenkins Administrator | your@email
     SONARQUBE_URL | URL for SonarQube server, you may use sonar-cloud as well ! | http://localhost:9000
 
 

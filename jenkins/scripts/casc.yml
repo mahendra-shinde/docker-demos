@@ -25,7 +25,7 @@ tool:
   jdk:
     installations:
     - home: "/opt/java/openjdk/"
-      name: "JAVA8"
+      name: "JAVA-11"
 
   sonarRunnerInstallation:
     installations:
